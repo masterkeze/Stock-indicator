@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Indicator", "Indicator\Indi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Indicator.Tests", "Indicator.Tests\Indicator.Tests.csproj", "{F93F2966-82A7-4609-9C8E-6458C17FB0C3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestHelper", "TestHelper\TestHelper.csproj", "{D966E5AB-27A0-41FB-B082-CA0901BC0D25}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestHelper.Tests", "TestHelper.Tests\TestHelper.Tests.csproj", "{38A2B03A-DB19-4A47-893C-4303A51D31DD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{F93F2966-82A7-4609-9C8E-6458C17FB0C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F93F2966-82A7-4609-9C8E-6458C17FB0C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F93F2966-82A7-4609-9C8E-6458C17FB0C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D966E5AB-27A0-41FB-B082-CA0901BC0D25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D966E5AB-27A0-41FB-B082-CA0901BC0D25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D966E5AB-27A0-41FB-B082-CA0901BC0D25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D966E5AB-27A0-41FB-B082-CA0901BC0D25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38A2B03A-DB19-4A47-893C-4303A51D31DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38A2B03A-DB19-4A47-893C-4303A51D31DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38A2B03A-DB19-4A47-893C-4303A51D31DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38A2B03A-DB19-4A47-893C-4303A51D31DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

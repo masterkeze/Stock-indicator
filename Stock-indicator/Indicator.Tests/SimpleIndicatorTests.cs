@@ -4,37 +4,42 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Indicator;
+using TestHelper;
 using Xunit;
 
 namespace Indicator.Tests
 {
     public class SimpleIndicatorTests
     {
-        public class MovingAverageTests
+        public class MovingAverage
         {
-            [Fact]
-            public void Should_ReturnEmptyList_When_EmptyInput()
+            [Theory]
+            [InlineData(0)]
+            [InlineData(-1)]
+            public void Should_ThrowArgumentException_When_NegativePeriod(int period)
             {
                 // Arrange
                 List<double> expected = new List<double>();
 
                 // Act
-                List<double> actual = SimpleIndicator.MovingAverage(new List<double>(), 0);
 
                 // Assert
-                Assert.Equal(expected, actual);
+                Assert.Throws<ArgumentException>("period", ()=> SimpleIndicator.MovingAverage(new List<double>(), period));
             }
-            [Fact]
-            public void Should_ReturnSameInputList_When_PeriodIsOne()
+            [Theory]
+            [InlineData(1, 1)]
+            [InlineData(10, 10)]
+            public void Should_EqualToDataSize(int length, int period)
             {
                 // Arrange
-                List<double> expected = new List<double>() { 0 };
+                List<double> data = ListHelper.GetDoubleListWithLength(length);
+                int expected = length;
 
                 // Act
-                List<double> actual = SimpleIndicator.MovingAverage(new List<double>() { 0 }, 1);
+                List<double?> output = SimpleIndicator.MovingAverage(data, period);
 
                 // Assert
-                Assert.Equal(expected, actual);
+                Assert.Equal(expected, output.Count);
             }
         }
     }
