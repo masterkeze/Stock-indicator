@@ -8,20 +8,21 @@ namespace Indicator
 {
     public class SimpleIndicator
     {
-        public static List<double?> MovingAverage(List<double> data, int period)
+        public const double EMPTY_NUMBER = -9999;
+        public static List<double> MovingAverage(List<double> data, int period)
         {
             if (period <= 0)
             {
                 throw new ArgumentException("You passed in a non-positive period","period");
             }
-            List<double?> output = new List<double?>();
+            List<double> output = new List<double>();
             double netSum = 0;
             for (int i = 0; i < data.Count; i++)
             {
                 netSum += data[i];
                 if (i + 1 < period)
                 {
-                    output.Add(null);
+                    output.Add(EMPTY_NUMBER);
                 }
                 else
                 {
