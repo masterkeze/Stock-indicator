@@ -36,5 +36,9 @@ namespace Indicator
 
             return output;
         }
+        public static List<double> ExponetialMovingAverage(List<double> data, int period)
+        {
+
+        }
     }
 }
